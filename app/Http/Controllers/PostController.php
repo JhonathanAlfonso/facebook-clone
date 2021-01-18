@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     protected function index(): PostCollection
     {
-        return new PostCollection(Post::all());
+        return new PostCollection(request()->user()->posts);
     }
 
     /**
